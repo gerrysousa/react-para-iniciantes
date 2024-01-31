@@ -87,11 +87,11 @@ Criando uma Aplicação React
 - [x] Código da nossa aplicação React final 00: 16
 - [x] Criando nossa primeira aplicação React 03: 26
 - [x] Anatomia de um app React 12: 12
-- [ ] Componentes React 04: 37
-- 
+- [x] Componentes React 04: 37
+ 
 Criando Componentes React 
-- [ ] Usando CSS em Apps React 02: 42
-- [ ] Criando o componente Navbar 04: 00
+- [x] Usando CSS em Apps React 02: 42
+- [x] Criando o componente Navbar 04: 00
 - [ ] Estilizando a Navbar com CSS 04: 11
 
 Props e State
