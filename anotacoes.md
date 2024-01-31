@@ -95,7 +95,7 @@ Criando Componentes React
 - [x] Estilizando a Navbar com CSS 04: 11
 
 Props e State
-- [ ] Criando componente TaskList 08: 11
+- [x] Criando componente TaskList 08: 11
 - [ ] Componentes robustos utilizando PropTypes 05: 02
 - [ ] Controle de estado com useState Hook 08: 05
 - [ ] Adicionando Tarefas ao Kanban 11: 54
