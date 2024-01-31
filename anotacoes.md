@@ -92,7 +92,7 @@ Criando uma Aplicação React
 Criando Componentes React 
 - [x] Usando CSS em Apps React 02: 42
 - [x] Criando o componente Navbar 04: 00
-- [ ] Estilizando a Navbar com CSS 04: 11
+- [x] Estilizando a Navbar com CSS 04: 11
 
 Props e State
 - [ ] Criando componente TaskList 08: 11
