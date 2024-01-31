@@ -6,8 +6,8 @@ export default function App() {
   return (
     <div className="App">
       <Navbar />
-      <div>
-        <TaskList title="To Do" />
+      <div className="container">
+        <TaskList className="tasklist" title="To Do" />
         <TaskList title="In Progress" />
         <TaskList title="Done" />
       </div>
