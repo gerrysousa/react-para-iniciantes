@@ -98,7 +98,7 @@ Props e State
 - [x] Criando componente TaskList 08: 11
 - [x] Componentes robustos utilizando PropTypes 05: 02
 - [x] Controle de estado com useState Hook 08: 05
-- [ ] Adicionando Tarefas ao Kanban 11: 54
+- [x] Adicionando Tarefas ao Kanban 11: 54
 
 Eventos e Renderização condicional
 - [ ] Editando Tarefas e Eventos 12: 39
