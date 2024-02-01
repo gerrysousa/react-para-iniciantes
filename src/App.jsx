@@ -3,12 +3,6 @@ import "./styles.css";
 import Navbar from "./components/Navbar/Navbar";
 import TaskList from "./components/TaskList/TaskList";
 
-const task = {
-  id: 0,
-  title: "New Task",
-  status: "pending",
-};
-
 let idAcc = 0;
 const generateId = () => {
   idAcc = idAcc + 1;
@@ -30,11 +24,44 @@ export default function App() {
     });
   };
 
+  const updateTask = ({ id, title, status }) => {
+    console.log("function updateTask called App.js");
+    setTasks((existingTasks) => {
+      return existingTasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, title, status };
+        } else {
+          return task;
+        }
+      });
+    });
+  };
+
   return (
     <div className="App">
       <Navbar />
       <div className="container">
-        <TaskList title="To Do" onAddTask={addTask} tasks={tasks} />
+        <TaskList
+          title="To Do"
+          onAddTask={addTask}
+          taskStatus="pending"
+          tasks={tasks.filter((task) => task.status === "pending")}
+          onTaskUpdate={updateTask}
+        />
+        <TaskList
+          title="Doing"
+          onAddTask={addTask}
+          taskStatus="started"
+          tasks={tasks.filter((task) => task.status === "started")}
+          onTaskUpdate={updateTask}
+        />
+        <TaskList
+          title="Done"
+          onAddTask={addTask}
+          taskStatus="completed"
+          tasks={tasks.filter((task) => task.status === "completed")}
+          onTaskUpdate={updateTask}
+        />
       </div>
     </div>
   );

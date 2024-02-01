@@ -3,10 +3,16 @@ import "./tasklist.css";
 import PropTypes from "prop-types";
 import TaskItem from "../TaskItem/TaskItem";
 
-export default function TaskList({ title, onAddTask, tasks }) {
+export default function TaskList({
+  title,
+  onAddTask,
+  tasks,
+  taskStatus,
+  onTaskUpdate,
+}) {
   const addTask = () => {
     console.log("function addTask called TaskList.js");
-    onAddTask("New Task", "pending");
+    onAddTask("New Task", taskStatus);
   };
 
   return (
@@ -19,6 +25,7 @@ export default function TaskList({ title, onAddTask, tasks }) {
             id={task.id}
             title={task.title}
             status={task.status}
+            onTaskUpdate={onTaskUpdate}
           />
         ))}
       </div>

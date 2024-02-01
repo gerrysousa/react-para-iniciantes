@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import "./taskitem.css";
 import PropTypes from "prop-types";
 
-export default function TaskItem({ id, title, status }) {
+export default function TaskItem({ id, title, status, onTaskUpdate }) {
   const [isEditing, setIsEditing] = useState(false);
   const [newTitle, setNewTitle] = useState(title);
 
   const handleTitleChange = (event) => {
-    setNewTitle(event.target.value);
+    const newTitle = event.target.value;
+    setNewTitle(newTitle);
+    onTaskUpdate(id, newTitle, status);
   };
 
   const handleSave = (event) => {
