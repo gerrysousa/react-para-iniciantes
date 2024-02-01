@@ -24,8 +24,7 @@ export default function App() {
     });
   };
 
-  const updateTask = ({ id, title, status }) => {
-    console.log("function updateTask called App.js");
+  const updateTask = (id, title, status) => {
     setTasks((existingTasks) => {
       return existingTasks.map((task) => {
         if (task.id === id) {

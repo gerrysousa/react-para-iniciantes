@@ -19,15 +19,18 @@ export default function TaskList({
     <div className="tasklist">
       <div className="title">{title}</div>
       <div className="content">
-        {tasks.map((task) => (
-          <TaskItem
-            key={task.id}
-            id={task.id}
-            title={task.title}
-            status={task.status}
-            onTaskUpdate={onTaskUpdate}
-          />
-        ))}
+        {tasks.map((task) => {
+          console.log(task);
+          return (
+            <TaskItem
+              key={task.id}
+              id={task.id}
+              title={task.title}
+              taskstatus={task.status}
+              onTaskUpdate={onTaskUpdate}
+            />
+          );
+        })}
       </div>
       <button onClick={addTask}>Add Task</button>
     </div>
@@ -38,4 +41,5 @@ TaskList.propTypes = {
   title: PropTypes.string.isRequired,
   onAddTask: PropTypes.func.isRequired,
   tasks: PropTypes.array.isRequired,
+  onTaskUpdate: PropTypes.func.isRequired,
 };

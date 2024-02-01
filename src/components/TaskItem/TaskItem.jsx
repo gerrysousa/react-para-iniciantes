@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import "./taskitem.css";
 import PropTypes from "prop-types";
 
-export default function TaskItem({ id, title, status, onTaskUpdate }) {
+export default function TaskItem({ id, title, taskstatus, onTaskUpdate }) {
   const [isEditing, setIsEditing] = useState(false);
   const [newTitle, setNewTitle] = useState(title);
 
   const handleTitleChange = (event) => {
+    console.log(event.target.value);
     const newTitle = event.target.value;
     setNewTitle(newTitle);
-    onTaskUpdate(id, newTitle, status);
+    onTaskUpdate(id, newTitle, taskstatus);
   };
 
   const handleSave = (event) => {
@@ -18,19 +19,31 @@ export default function TaskItem({ id, title, status, onTaskUpdate }) {
     }
   };
 
+  const onTaskStatusChange = (event) => {
+    console.log(event.target.value);
+    onTaskUpdate(id, title, event.target.value);
+  };
+
   if (isEditing) {
     return (
-      <input
-        type="text"
-        value={newTitle}
-        onChange={handleTitleChange}
-        onKeyDown={handleSave}
-      />
+      <div className="taskitem">
+        <input
+          type="text"
+          value={newTitle}
+          onChange={handleTitleChange}
+          onKeyDown={handleSave}
+        />
+      </div>
     );
   } else {
     return (
-      <div onClick={(e) => setIsEditing(true)} onKeyDown={handleSave}>
-        {newTitle}
+      <div className="taskitem">
+        <div onClick={(e) => setIsEditing(true)}>{newTitle}</div>
+        <select onChange={onTaskStatusChange} value={taskstatus}>
+          <option value="pending">Pending</option>
+          <option value="started">Started</option>
+          <option value="completed">Completed</option>
+        </select>
       </div>
     );
   }
@@ -39,5 +52,6 @@ export default function TaskItem({ id, title, status, onTaskUpdate }) {
 TaskItem.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
+  taskstatus: PropTypes.string.isRequired,
+  onTaskUpdate: PropTypes.func.isRequired,
 };

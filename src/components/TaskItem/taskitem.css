@@ -1,4 +1,4 @@
-.task-item {
+.taskitem {
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
@@ -10,14 +10,14 @@
   font-size: 14px;
 }
 
-.task-item input[type="text"] {
+.taskitem input[type="text"] {
   border: none;
   font-size: 14px;
   display: block;
   width: 100%;
 }
 
-.task-item select {
+.taskitem select {
   display: block;
   width: 100%;
   margin-top: 8px;
