@@ -101,7 +101,7 @@ Props e State
 - [x] Adicionando Tarefas ao Kanban 11: 54
 
 Eventos e Renderização condicional
-- [ ] Editando Tarefas e Eventos 12: 39
+- [x] Editando Tarefas e Eventos 12: 39
 - [ ] Salvando e filtrando tarefas 10: 27
 - [ ] Movendo Tarefas entre listas 03: 31
 - [ ] Deletando Tarefas 05: 25
