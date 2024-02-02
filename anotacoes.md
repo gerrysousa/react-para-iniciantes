@@ -104,7 +104,7 @@ Eventos e Renderização condicional
 - [x] Editando Tarefas e Eventos 12: 39
 - [x] Salvando e filtrando tarefas 10: 27
 - [x] Movendo Tarefas entre listas 03: 31
-- [ ] Deletando Tarefas 05: 25
+- [x] Deletando Tarefas 05: 25
 - [ ] Renderização condicional e uso de SVG 07: 45
 - 
 BÔNUS

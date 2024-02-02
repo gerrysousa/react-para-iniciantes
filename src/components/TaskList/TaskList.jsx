@@ -9,6 +9,7 @@ export default function TaskList({
   tasks,
   taskStatus,
   onTaskUpdate,
+  onTaskDelete,
 }) {
   const addTask = () => {
     console.log("function addTask called TaskList.js");
@@ -28,6 +29,7 @@ export default function TaskList({
               title={task.title}
               taskstatus={task.status}
               onTaskUpdate={onTaskUpdate}
+              onTaskDelete={onTaskDelete}
             />
           );
         })}

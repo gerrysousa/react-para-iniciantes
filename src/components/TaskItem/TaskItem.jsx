@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import "./taskitem.css";
 import PropTypes from "prop-types";
 
-export default function TaskItem({ id, title, taskstatus, onTaskUpdate }) {
+export default function TaskItem({
+  id,
+  title,
+  taskstatus,
+  onTaskUpdate,
+  onTaskDelete,
+}) {
   const [isEditing, setIsEditing] = useState(false);
   const [newTitle, setNewTitle] = useState(title);
 
@@ -16,6 +22,9 @@ export default function TaskItem({ id, title, taskstatus, onTaskUpdate }) {
   const handleSave = (event) => {
     if (event.key === "Enter") {
       setIsEditing(false);
+      if (newTitle.trim().length === 0) {
+        onTaskDelete(id);
+      }
     }
   };
 
