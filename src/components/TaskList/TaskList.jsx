@@ -2,6 +2,7 @@ import React from "react";
 import "./tasklist.css";
 import PropTypes from "prop-types";
 import TaskItem from "../TaskItem/TaskItem";
+import plusIcon from "../../img/plus-icon.svg";
 
 export default function TaskList({
   title,
@@ -33,8 +34,12 @@ export default function TaskList({
             />
           );
         })}
+        {tasks.length === 0 && <div className="empty-list">Empty List</div>}
+        <button onClick={addTask} className="btn">
+          <img src={plusIcon} alt="plus" />
+          Add Task
+        </button>
       </div>
-      <button onClick={addTask}>Add Task</button>
     </div>
   );
 }
@@ -43,5 +48,4 @@ TaskList.propTypes = {
   title: PropTypes.string.isRequired,
   onAddTask: PropTypes.func.isRequired,
   tasks: PropTypes.array.isRequired,
-  onTaskUpdate: PropTypes.func.isRequired,
 };

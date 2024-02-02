@@ -105,7 +105,7 @@ Eventos e Renderização condicional
 - [x] Salvando e filtrando tarefas 10: 27
 - [x] Movendo Tarefas entre listas 03: 31
 - [x] Deletando Tarefas 05: 25
-- [ ] Renderização condicional e uso de SVG 07: 45
+- [x] Renderização condicional e uso de SVG 07: 45
 - 
 BÔNUS
-- [ ] - Salvando código no Github
+- [x] - Salvando código no Github
